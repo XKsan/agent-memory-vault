@@ -12,8 +12,9 @@ rm -rf /tmp/${NAME}
 
 mkdir /tmp/${NAME}
 
-cp -r agent_memory /tmp/${NAME}/
-cp -r examples /tmp/${NAME}/
+rsync -av --exclude='__pycache__' --exclude='*.pyc' agent_memory /tmp/${NAME}/
+
+rsync -av --exclude='__pycache__' --exclude='*.pyc' examples /tmp/${NAME}/
 cp -r docs /tmp/${NAME}/
 
 cp README.md /tmp/${NAME}/

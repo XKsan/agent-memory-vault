@@ -11,23 +11,9 @@ from agent_memory import AgentMemoryVault
 vault = AgentMemoryVault()
 
 
-# Save user preferences
-vault.save(
-    "user",
-    "User likes concise answers and practical solutions."
-)
+vault.save("user", "User likes concise answers.", tags=["preference"])
+vault.save("project", "CASH ENGINE builds AI products.", tags=["cash-engine"])
 
-
-# Save project knowledge
-vault.save(
-    "project",
-    "The product is building AI tools for independent creators."
-)
-
-
-# Retrieve relevant memory
-context = vault.context("AI")
-
-
-print("Agent Context:")
-print(context)
+print(vault.stats())
+print(vault.context("AI"))
+print(vault.search("AI"))
