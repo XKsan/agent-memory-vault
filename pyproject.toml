@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "agent-memory-vault"
+version = "0.1.0"
+description = "A lightweight memory layer for AI agents"
+authors = [
+    {name="CASH ENGINE"}
+]
+requires-python = ">=3.10"
+
+
+[tool.setuptools]
+packages = [
+    "agent_memory"
+]
+
